@@ -1,20 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Accordion } from 'semantic-ui-react';
+import { Icon } from 'semantic-ui-react';
+import md5 from 'blueimp-md5';
 
 const UserInfo = props => {
+    const { email, address } = props;
+    const emailHash = md5(email.toLowerCase());
+    const gravatar = 'https://www.gravatar.com/avatar/' + emailHash;
     return (
         <div>
-            <Accordion.Title><h3>{props.name}</h3></Accordion.Title>
-            <Accordion.Content>
-                Street: {props.address.street}, Suite: {props.address.suite}, City: {props.address.city}, Zip: {props.address.zipcode}
-            </Accordion.Content>
+            <img src={gravatar} /> <br />
+            <Icon name="location arrow" />Street: {address.street}, Suite: {address.suite}, City: {address.city}, Zip: {address.zipcode}
         </div>
     );
 };
 
 UserInfo.propTypes = {
-    name: PropTypes.string,
+    email: PropTypes.string,
     address: PropTypes.object
 };
 

@@ -10,9 +10,7 @@ const StyledHeader = Styled.div`
 const UserListHeader = () => {
     return (
         <StyledHeader>
-            <Header as="h1">
-                User List
-            </Header>
+            <Header as="h1">User List</Header>
         </StyledHeader>
     );
 };

@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import { Input } from 'semantic-ui-react';
 
 const UserListFilter = props => {
-    return (
-        <Input onChange={props.handleFilter} placeholder='Search for a User....' />
-    );
+    return <Input onChange={props.handleFilter} placeholder="Search for a User...." />;
 };
 
 UserListFilter.propTypes = {
