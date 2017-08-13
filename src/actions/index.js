@@ -14,7 +14,7 @@ export const fetchUserData = (endpoint) => {
     }
 };
 
-const requestUserData = () => {
+export const requestUserData = () => {
     return {
         type: FETCH_USERS_REQUEST
     }

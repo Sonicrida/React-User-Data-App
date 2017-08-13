@@ -2,7 +2,7 @@ import { FETCH_USERS_REQUEST, FETCH_USERS_SUCCESS } from '../constants/actionTyp
 
 const initialState = {
     users: [],
-    isFetching: false
+    isFetching: true
 };
 
 export default function userDataReducer(state = initialState, action) {
