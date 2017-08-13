@@ -1,1 +1,1 @@
-export const userEndpoint = 'http://jsonplaceholder.typicode.com/users';
+export const userEndpoint = 'https://jsonplaceholder.typicode.com/users';

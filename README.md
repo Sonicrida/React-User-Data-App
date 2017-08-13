@@ -13,3 +13,5 @@ Tools Used
 - blueimp-md5
 - Styled-Components
 - Axios
+
+This application is hosted live using `now` https://build-ehzrcyldvf.now.sh/
