@@ -1,29 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Accordion, Header } from 'semantic-ui-react';
-
-import UserInfo from './UserInfo';
+import { Accordion } from 'semantic-ui-react';
 
 const UserList = props => {
     const { users } = props;
     // const userListItems = users.map((user) => <UserInfo key={user.id} name={user.name} address={user.address} />);
+
+    // Process user data to send to Accordion "panels" prop
     const userListItems = users.map((user) => {
         return {
             title: user.name,
             content: 'Street: ' + user.address.street + ', Suite: ' + user.address.suite+ ', City: ' + user.address.city + ', Zip: ' + user.address.zipcode
         };
     });
-    console.log(userListItems);
-    return <div>
-            <Header as="h1" style={{ marginTop: '4rem', textAlign: 'center' }}>
-                User List
-            </Header>
+
+    return (
+        <div>
             <Accordion styled fluid panels={userListItems} />
-        </div>;
+        </div>
+    );
 };
 
 UserList.propTypes = {
-    
+    users: PropTypes.array
 };
 
 export default UserList;

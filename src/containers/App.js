@@ -3,8 +3,8 @@ import '../App.css';
 import { connect } from 'react-redux';
 import { userEndpoint } from '../constants/endpoints';
 import { fetchUserData } from '../actions';
-import UserList from './UserList';
-import { Container, Dimmer, Loader, Segment } from 'semantic-ui-react';
+import UserListContainer from './UserListContainer';
+import { Container, Dimmer, Loader } from 'semantic-ui-react';
 
 class App extends Component {
     componentWillMount() {
@@ -26,7 +26,7 @@ class App extends Component {
 
         return (
             <Container text>
-                <UserList users={users} />
+                <UserListContainer users={users} />
             </Container>
         );
     }

@@ -14,7 +14,8 @@ const UserInfo = props => {
 };
 
 UserInfo.propTypes = {
-    
+    name: PropTypes.string,
+    address: PropTypes.object
 };
 
 export default UserInfo;
